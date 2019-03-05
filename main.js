@@ -1,16 +1,22 @@
-function validasi() {
-    var nim = document.getElementById("nim").value;
-    var nama = document.getElementById("nama").value;
-    var kelas = document.getElementById("kelas").value;
-    var jurusan = document.getElementById("jurusan").value;
-    var skripsi = document.getElementById("skripsi").value;
-    var tanggal = document.getElementById("tanggal").value;
-    var jam = document.getElementById("jam").value;
-    var email = document.getElementById("email").value;
-    var bimbingan = document.getElementById("bimbingan").value;
-    if (nim !="" && nama != "" && kelas !="" && jurusan !="" && skripsi !="" && tanggal !="" && jam !="" && email!="" && bimbingan !="") {
-        return true;
-    }else{
-        alert('Anda harus mengisi data dengan lengkap !');
+const input = document.querySelectorAll('.form-control')
+const submit = document.getElementById('submit')
+var x = false;
+submit.addEventListener('click', function(){
+
+    for(var i = 0; i < input.length; i++){
+        if(input[i].value == ''){
+            x = true;
+        }
+        else if(i == input.length-1){
+            for(var i = 0; i < 9; i++){
+                if(input[i].value !== ''){
+                    input[i].value = ''
+                }
+            }
+            alert('Berhasil Submit Form')
+        }
     }
-}
+    if(x == true){
+        alert('ISIAN ANDA TIDAK LENGKAP')
+    }
+})

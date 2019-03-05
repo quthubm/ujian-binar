@@ -5,7 +5,7 @@
     <title>FORM UJIAN</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+    
 </head>
 
 <body>
@@ -18,31 +18,32 @@
     </div>
     <div id="isiform">
         <div>     
-            <form actions="#" method="POST" onsubmit="validasi()">
+            <form onsubmit="event.preventDefault()">
                 <br>NIM : <br>
-                <input type="text" name="nim" id="nim" placeholder="Nomor induk mahasiswa" >
+                <input type="text" id="nim" class="form-control" placeholder="Nomor induk mahasiswa" >
                 <br>Nama : <br>
-                <input type="text" name="nama" id="nama" placeholder="Nama lengkap mahasiswa">
+                <input type="text" id="nama" class="form-control" placeholder="Nama lengkap mahasiswa">
                 <br>Kelas : <br>
-                <input type="text" name="kelas" id="kelas" placeholder="Kelas">
+                <input type="text" id="kelas" class="form-control" placeholder="Kelas">
                 <br>Jurusan : <br>
-                <input type="text" name="jurusan" id="jurusan" placeholder="Jurusan">
+                <input type="text"  id="jurusan" class="form-control" placeholder="Jurusan">
                 <br>Judul Skripsi : <br>
-                <input type="text" name="skripsi" id="skripsi" placeholder="Judul Skripsi anda">
+                <input type="text"  id="skripsi" class="form-control" placeholder="Judul Skripsi anda">
                 <br>Pilih Tanggal : <br>
-                <input type="date" name="tanggal" id="tanggal">
+                <input type="date" class="form-control" id="tanggal">
                 <br>Pilih Jam : <br>
-                <input type="time" name="jam" id="jam">
+                <input type="time" class="form-control" id="jam">
                 <br>Email : <br>
-                <input type="email" name="email" id="email" placeholder="email anda">
+                <input type="email"  id="email"  class="form-control" placeholder="email anda">
                 <br>Materi Bimbingan : <br>
-                <textarea name="bimbingan" id="bimbingan" rows="10" placeholder="tuliskan mau bimbingan apa"></textarea>
-                <br><button type="submit" >SUBMIT</button>
+                <textarea name="bimbingan" id="bimbingan" rows="10" class="form-control" placeholder="tuliskan mau bimbingan apa"></textarea>
+                <br><button type="submit" id="submit" >SUBMIT</button>
             </form>
         </div>
     </div>
     </div>
     
+    <script src="main.js"></script>
 </body>
 
 
