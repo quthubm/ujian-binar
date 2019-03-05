@@ -13,7 +13,7 @@ submit.addEventListener('click', function(){
                     input[i].value = ''
                 }
             }
-            alert('Berhasil Submit Form')
+            alert('BERHASIL SUBMIT FORM')
         }
     }
     if(x == true){
